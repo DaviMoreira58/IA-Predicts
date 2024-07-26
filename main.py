@@ -34,3 +34,8 @@ model_knn = KNeighborsClassifier()
 
 model_forest.fit(x_training, y_training)
 model_knn.fit(x_training, y_training)
+
+
+forecast_forest = model_forest.predict(x_test)
+forecast_knn = model_knn.predict(x_test)
+
