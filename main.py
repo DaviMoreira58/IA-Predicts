@@ -45,6 +45,12 @@ print(f'{accuracy_score(y_test ,forecast_forest):.2f}')
 print(f'{accuracy_score(y_test ,forecast_knn):.2f}')
 
 
+
 db_newClt = os.path.join(path, 'novos_clientes.csv')
-print(os.path.exists(db_newClt))
+
+db_newClt['profissao'] = encoder.fit_transform(db_newClt['profissao'])
+db_newClt['mix_credito'] = encoder.fit_transform(db_newClt['mix_credito'])
+db_newClt['comportamento_pagamento'] = encoder.fit_transform(db_newClt['comportamento_pagamento'])
+
+
 
