@@ -30,3 +30,7 @@ x_training, x_test, y_training, y_test = train_test_split(x, y, test_size=0.3)
 
 model_forest = RandomForestClassifier()
 model_knn = KNeighborsClassifier()
+
+
+model_forest.fit(x_training, y_training)
+model_knn.fit(x_training, y_training)
