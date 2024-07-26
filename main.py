@@ -47,10 +47,11 @@ print(f'{accuracy_score(y_test ,forecast_knn):.2f}')
 
 
 db_newClt = os.path.join(path, 'novos_clientes.csv')
+new_table = pd.read_csv(db_newClt)
 
-db_newClt['profissao'] = encoder.fit_transform(db_newClt['profissao'])
-db_newClt['mix_credito'] = encoder.fit_transform(db_newClt['mix_credito'])
-db_newClt['comportamento_pagamento'] = encoder.fit_transform(db_newClt['comportamento_pagamento'])
+new_table['profissao'] = encoder.fit_transform(new_table['profissao'])
+new_table['mix_credito'] = encoder.fit_transform(new_table['mix_credito'])
+new_table['comportamento_pagamento'] = encoder.fit_transform(new_table['comportamento_pagamento'])
 
-
-
+predict = model_forest.predict(new_table)
+print(f'{predict}')
