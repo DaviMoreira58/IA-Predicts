@@ -7,4 +7,4 @@ path = os.path.join(source, 'db')
 db_clt = os.path.join(path, 'clientes.csv')
 
 table = pd.read_csv(db_clt)
-print(table)
+print(table.info())
