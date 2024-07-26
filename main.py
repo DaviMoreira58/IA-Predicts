@@ -10,3 +10,6 @@ table = pd.read_csv(db_clt)
 
 encoder = LabelEncoder()
 table['profissao'] = encoder.fit_transform(table['profissao'])
+
+table['mix_credito'] = encoder.fit_transform(table['mix_credito'])
+
