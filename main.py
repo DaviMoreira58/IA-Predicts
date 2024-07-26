@@ -44,3 +44,7 @@ forecast_knn = model_knn.predict(x_test)
 print(f'{accuracy_score(y_test ,forecast_forest):.2f}')
 print(f'{accuracy_score(y_test ,forecast_knn):.2f}')
 
+
+db_newClt = os.path.join(path, 'novos_clientes.csv')
+print(os.path.exists(db_newClt))
+
