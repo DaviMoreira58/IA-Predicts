@@ -5,6 +5,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.metrics import accuracy_score
+import numpy as np
 
 source = os.path.abspath('.')
 path = os.path.join(source, 'db')
@@ -38,4 +39,8 @@ model_knn.fit(x_training, y_training)
 
 forecast_forest = model_forest.predict(x_test)
 forecast_knn = model_knn.predict(x_test)
+
+
+print(f'{accuracy_score(y_test ,forecast_forest):.2f}')
+print(f'{accuracy_score(y_test ,forecast_knn):.2f}')
 
