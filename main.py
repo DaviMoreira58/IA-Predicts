@@ -13,3 +13,5 @@ table['profissao'] = encoder.fit_transform(table['profissao'])
 
 table['mix_credito'] = encoder.fit_transform(table['mix_credito'])
 
+table['comportamento_pagamento'] = encoder.fit_transform(table['comportamento_pagamento'])
+
