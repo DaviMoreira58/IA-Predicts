@@ -26,3 +26,7 @@ x = table.drop(columns=['score_credito', 'id_cliente'])
 y = table['score_credito']
 
 x_training, x_test, y_training, y_test = train_test_split(x, y, test_size=0.3)
+
+
+model_forest = RandomForestClassifier()
+model_knn = KNeighborsClassifier()
